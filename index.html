@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Scratch Extensions Directory</title>
+<script src="jquery-1.11.3.min.js"></script>
+<style>
+table {
+margin-left:auto; 
+margin-right:auto;
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 1000px;
+border-collapse:
+collapse; border-spacing: 0;
+}
+
+td, th {
+padding: 0px 5px;
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+background: #DFDFDF;  /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: left;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }  
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td { background: #FEFEFE; } 
+/* Hover cell effect!
+tr td:hover { background: #666; color: #FFF; }  */
+
+#title {
+text-align: center;
+font-size: 225%;
+}
+
+.inputHolder{
+text-align: center;
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+#search {
+box-sizing: content-box;
+height: 20px;
+width: 200px;
+perspective-origin: 108px 15px;
+transform-origin: 108px 15px;
+border: 1px solid rgb(204, 204, 204);
+border-radius: 3px 3px 3px 3px;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+color: #333;
+}
+</style>
+<script>
+var extensionTitles = [ "Alarm extension", "Ambient Light", "API Info", "Battery Status", "Be Cool", "Browser Info", "Browser Stuff", "Cloud Data", "Cookie Variables", "Cool helpful things extension", "Data Blocks", "Debugging", "Extension Loader", "Feedme", "Gamepad", "Go to Project", "HQ Sound", "Infinity Reporter", "JavaScript Dialogs", "Joystick", "Link Opener", "littleBits", "Local Storage", "MathExt", "Mesh", "Minecraft Server Checker", "More Math", "More Operators", "PhysExt", "PicoBoard", "PicoBoard", "Power Extension", "Random wait Extension", "Speech to Text", "Splendid Strings", "StringExt", "Temp vars and Lists", "Text to Speech", "Text to Speech Simple", "Tixrmy", "VarExt", "Weather Extension", "WebExt" ];
+
+var extensionAuthors = [ "Scratchteam", "djdolphin", "Thepuzzlegame", "technoboy10", "djdolphin, bobbybee", "andrewjcole", "Scratchteam", "technoboy10", "djdolphin", "PullJosh", "Thepuzzlegame", "savaka", "Thepuzzlegame", "powerpoint56", "bobbybee", "MegaApuTurkUltra", "MegaApuTurkUltra", "Thepuzzlegame", "savaka", "Scratchteam", "savaka", "khanning", "Scratchteam", "StarStudios23", "bobbybee", "Mrcomputer1", "savaka", "savaka", "StarStudios23", "SCRAXE", "Scratchteam", "Scratchteam", "Scratchteam", "Scratchteam", "BookOwl", "StarStudios23", "Zro716", "Scratchteam", "Scratchteam", "savaka", "StarStudios23", "Scratchteam", "StarStudios23" ];
+
+var extensionLinks = [ "http://thepuzzlegame.github.io/extensions/alarm_extension.js", "http://dylan.cf/scratchx/ambientlight.js", "http://thepuzzlegame.github.io/extensions/API_info.js", "http://technoboy10.tk/scratchx/battery.js", "http://dylan.cf/scratchx/becool.js", "http://thepuzzlegame.github.io/extensions/browser-info.js", "http://thepuzzlegame.github.io/extensions/browser_extension.js", "http://technoboy10.tk/scratchx/cloud.js", "http://dylan.cf/scratchx/cookievariables.js", "http://thepuzzlegame.github.io/extensions/Cool helpful things.js", "http://thepuzzlegame.github.io/extensions/data_extension.js", "http://thepuzzlegame.github.io/extensions/debugging.js", "http://thepuzzlegame.github.io/extensions/extension loader.js", "http://thepuzzlegame.github.io/extensions/feedme.js", "http://thepuzzlegame.github.io/extensions/gamepad.js", "https://raw.githubusercontent.com/MegaApuTurkUltra/Scratch-Go-To-Project/master/go-to-project.ext.js", "https://raw.githubusercontent.com/MegaApuTurkUltra/Scratch-HQ-Sound/master/scratch-hqs.ext.js", "http://thepuzzlegame.github.io/extensions/infinity_reporter.js", "http://thepuzzlegame.github.io/extensions/javascript_dialogs.js", "http://thepuzzlegame.github.io/extensions/joystickExtension.js", "http://thepuzzlegame.github.io/extensions/link_opener.js", "http://thepuzzlegame.github.io/extensions/littlebits_extension.js", "http://thepuzzlegame.github.io/extensions/localstorage_extension.js", "http://thepuzzlegame.github.io/extensions/MathExt.js", "http://thepuzzlegame.github.io/extensions/mesh.js", "http://scratchx.org/?url=http://mrcomputer1.github.io/MinecraftServerCheckerExtension/MinecraftExtension.js", "http://thepuzzlegame.github.io/extensions/more_math.js", "http://thepuzzlegame.github.io/extensions/more_operators.js", "http://thepuzzlegame.github.io/extensions/PhysExt.js", "http://thepuzzlegame.github.io/extensions/scraxepicoextension.js", "http://thepuzzlegame.github.io/extensions/picoExtension.js", "http://thepuzzlegame.github.io/extensions/power_extension.js", "http://thepuzzlegame.github.io/extensions/random_wait_extension.js", "http://thepuzzlegame.github.io/extensions/speech_to_text_extension.js", "http://thepuzzlegame.github.io/extensions/splendidstrings.js", "http://thepuzzlegame.github.io/extensions/StringExt.js", "http://thepuzzlegame.github.io/extensions/temp vars and lists.js", "http://thepuzzlegame.github.io/extensions/text_to_speech_simple_extension.js", "http://thepuzzlegame.github.io/extensions/text_to_speech_extension.js", "http://thepuzzlegame.github.io/extensions/tixrmy.js", "http://thepuzzlegame.github.io/extensions/VarExt.js", "http://thepuzzlegame.github.io/extensions/weather_extension.js", "http://thepuzzlegame.github.io/extensions/WebExt.js" ];
+
+var extensionDescriptions = [ "Adds alarm system", "Gets reading on ambient light", "Gets info from Scratch through Scratch's API", "Reports on current battery status", "Editor rotation!", "Gets browser info", "Open JS dialog boxes", "Grabs and reads cloud data from projects", "Enables cookie variables in the editor", "Math blocks/other features", "Adds data manipulating blocks", "Adds inline comments and a block to print to the console", "Loads extension from a URL", "Adds functionality from the Google Feed API", "A thin wrapper around the Gamepad API which supports Xbox 360 controllers, most PS3 controllers, and other non-brand D-Pad controllers", "Goes to projects", "Allows for high quality sound within Scratch", "Adds an infinity reporter", "Opens JS dialog boxes", "Gets values of a joystick", "Goes to websites", "Connects to littleBits", "Uses JavaScript localStorage API", "Multiple operators and a useful block for getting the hypotenuse of a triangle", "Enables mesh", "Gets data from minecraft servers", "Adds a lot more math stuff", "Adds some more operator blocks, and the when <> hat block", "Gets bounce ranges for objects", "Same as below extension but with bug fixes", "Connects to PicoBoard", "Adds a power block", "Adds random wait block", "Uses JavaScript Speech API for speech to text", "Adds blocks for working with strings", "Several string manipulating features", "Temporary variables and lists", "Simpler version of below extension", "Uses JavaScript Speech API for text to speech", "Implementation of the RSA Data Security", "A couple blocks for working with variables", "Reports temperature for city", "Receives page data and opens urls" ];
+
+$(document).ready(function(){ 
+$( "#outputs" ).hide();
+for (i = 0; i < extensionTitles.length; i++) {
+	$( "#directory" ).append( '<tr><td>' + extensionTitles[i] + '</td><td>' + extensionAuthors[i] + '</td><td><a href=http://scratchx.org/?url=' + extensionLinks[i] + '#scratch target="_blank">ScratchX</a></td><td>' + extensionDescriptions[i] +'</td><tr>' );
+}
+}) 
+
+</script>
+<script>
+//original script by dfsq, thanks a ton!
+$( document ).ready(function() {
+var $rows = $('#directory tr');
+$('#search').keyup(function() {
+    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+        reg = RegExp(val, 'i'),
+        text;
+    
+    $rows.show().filter(function() {
+	if (document.getElementById('search').value.length>0) {
+	$("#top").hide();
+	} else {
+	$("#top").show();
+	}
+        text = $(this).text().replace(/\s+/g, ' ');
+        return !reg.test(text);
+    }).hide();
+});
+});
+</script>
+<script>
+//for my own use to make updating the list quicker
+function addtolist() {
+var title = prompt("Title", "");
+var author = prompt("Author", "");
+var link = prompt("Link", "http://thepuzzlegame.github.io/extensions/");
+var description = prompt("Description", "");
+extensionTitles.push(title);
+extensionTitles.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+});
+var n = extensionTitles.indexOf(title);
+extensionAuthors.splice(n, 0, author);
+extensionLinks.splice(n, 0, link);
+extensionDescriptions.splice(n, 0, description);
+$( "#outputs" ).show();
+document.getElementById('output1').innerHTML = "var extensionTitles = " + JSON.stringify(extensionTitles, null, 4) + ";";
+document.getElementById('output2').innerHTML = "var extensionAuthors = " + JSON.stringify(extensionAuthors, null, 4) + ";";
+document.getElementById('output3').innerHTML = "var extensionLinks = " + JSON.stringify(extensionLinks, null, 4) + ";";
+document.getElementById('output4').innerHTML = "var extensionDescriptions = " + JSON.stringify(extensionDescriptions, null, 4) + ";";
+}
+</script>
+</head>
+<body>
+<p id="title">Scratch Extensions Directory</p>
+
+<div class="inputHolder">
+<p>Not sure what this is all about? Check <a href="http://scratchx.org/#faq">this</a> page out. Submit your own extensions <a href="https://scratch.mit.edu/discuss/topic/115258/">here.</a>
+</p>
+<p>Disclaimer: Extensions listed on this site are not endorsed by me or otherwise guaranteed safe.</p>
+<input type="text" id="search" placeholder="Type to search">
+</div>
+<br>
+<div id="outputs"><div id="output1"></div><br><div id="output2"></div><br><div id="output3"></div><br><div id="output4"></div><br></div>
+<table id="directory">
+<tr id="top">
+<th>Title</th>
+<th>Author</th>
+<th>Links</th>
+<th>Description</th>
+</tr>
+</table>
+</body>
+</html>
