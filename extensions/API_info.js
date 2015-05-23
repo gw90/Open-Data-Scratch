@@ -35,5 +35,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('Sample extension', descriptor, ext);
+    ScratchExtensions.register('Scratch API info', descriptor, ext);
 })({});
