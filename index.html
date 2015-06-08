@@ -4,6 +4,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>Scratch Extensions Directory</title>
 <script src="jquery-1.11.3.min.js"></script>
+<script src="list.js"></script>
 <style>
 table {
 margin-left:auto; 
@@ -67,22 +68,11 @@ color: #333;
 }
 </style>
 <script>
-var extensionTitles = [ "Alarm extension", "Ambient Light", "Battery Status", "Be Cool", "Browser Info and Language", "Browser Stuff", "Cloud Data", "Cookie", "Cookie Variables", "Cool helpful things extension", "Data", "Debugging", "Extension Loader", "Extension Status Getter", "FeedMe RSS fun", "Gamepad", "Go to Project", "Hash", "HQ Sound", "Infinity Reporter", "JavaScript Dialogs", "Joystick", "Link Opener", "littleBits", "Local Storage", "Logic", "Math", "MathExt", "Mesh", "Minecraft Server Checker", "More Math", "More Operators", "PhysExt", "PicoBoard", "PicoBoard", "Power Extension", "Random wait Extension", "Speech to Text", "Splendid Strings", "StringExt", "Temp Vars and Lists", "Text to Speech", "VarExt", "Weather Extension", "WebExt", "Xi4s English", "Xi4s French" ];
+$(document).ready(function(){
+for (i = 0; i < extensions.length; i++) {
 
-var extensionAuthors = [ "Scratchteam", "djdolphin", "technoboy10", "djdolphin, bobbybee", "andrewjcole", "Scratchteam", "technoboy10", "gregory9", "djdolphin", "PullJosh", "Thepuzzlegame", "savaka", "Thepuzzlegame", "Znapi", "powerpoint56", "bobbybee", "MegaApuTurkUltra", "savaka", "MegaApuTurkUltra", "Thepuzzlegame", "savaka", "Scratchteam", "savaka", "khanning", "Scratchteam", "savaka", "gregory9", "StarStudios23", "bobbybee", "Mrcomputer1", "savaka", "savaka", "StarStudios23", "SCRAXE", "Scratchteam", "Scratchteam", "Scratchteam", "Scratchteam", "BookOwl", "StarStudios23", "Zro716", "Scratchteam", "StarStudios23", "Scratchteam", "StarStudios23", "itchy20", "itchy20" ];
-
-var extensionLinks = [ "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Alarm_extension.js#scratch", "http://scratchx.org/?url=http://dylan.cf/scratchx/ambientlight.js#scratch", "http://scratchx.org/?url=http://technoboy10.tk/scratchx/battery.js#scratch", "http://scratchx.org/?url=http://dylan.cf/scratchx/becool.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Browser_Info_and_Language.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Browser_Stuff.js#scratch", "http://scratchx.org/?url=http://technoboy10.tk/scratchx/cloud.js#scratch", "http://scratchx.org/?url=http://gw90.github.io/Complete-Extensions/cookie-extension.js#scratch, http://gw90.github.io/scratch-extension/", "http://scratchx.org/?url=http://dylan.cf/scratchx/cookievariables.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Cool_helpful_things_extension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Data.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Debugging.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Extension_Loader.js#scratch", "http://scratchx.org/?url=http://znapi.github.io/scratchx/extension-status-getter/main.min.js#scratch, https://github.com/Znapi/scratchx/wiki/Extension-Status-Getter", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/FeedMe_RSS_fun.js#scratch", "http://scratchx.org/?url=https://rawgit.com/bobbybee/scratch-gamepad/master/ext.js#scratch", "http://scratchx.org/?url=https://rawgit.com/MegaApuTurkUltra/Scratch-Go-To-Project/master/go-to-project.ext.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Hash.js#scratch", "http://scratchx.org/?url=https://rawgit.com/MegaApuTurkUltra/Scratch-HQ-Sound/master/scratch-hqs.ext.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Infinity_Reporter.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Javascript_Dialogs.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Joystick.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Link_Opener.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/littleBits.js#scratch, https://github.com/khanning/scratch-littlebits-extension", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Local_Storage.js#scratch", "http://scratchx.org/?url=http://a.pomf.se/fdzopv.js#scratch", "http://scratchx.org/?url=http://gw90.github.io/Complete-Extensions/math-extension.js#scratch, http://gw90.github.io/scratch-extension/", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/MathExt.js#scratch", "http://scratchx.org/?url=https://rawgit.com/bobbybee/mesh-2.0/master/ext.js#scratch", "http://scratchx.org/?url=http://mrcomputer1.github.io/MinecraftServerCheckerExtension/MinecraftExtension.js#scratch, http://mrcomputer1.github.io/MinecraftServerCheckerExtension/", "http://scratchx.org/?url=http://a.pomf.se/yfqifs.js#scratch", "http://scratchx.org/?url=http://a.pomf.se/ruvypv.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/PhysExt.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/scraxePicoExtension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/picoExtension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Power_Extension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Random_wait_Extension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Speech_to_Text.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Splendid_Strings.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/StringExt.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Temp_Vars_and_Lists.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Text_to_Speech.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/VarExt.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Weather_Extension.js#scratch", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/WebExt.js#scratch", "http://scratchx.org/?url=http://MrYsLab.github.io/xi4s.js#scratch, https://github.com/MrYsLab/xi", "http://scratchx.org/?url=http://MrYsLab.github.io/xi4s_fr4.js#scratch, https://github.com/MrYsLab/xi" ];
-
-var extensionDescriptions = [ "Adds alarm countdown system", "Gets reading on ambient light", "Reports on current battery status", "Editor rotation!", "Gets browser info such as language", "Open JS dialog boxes and new tabs", "Grabs and reads cloud data from projects", "This extension allows you to use cookies with Scratch", "Enables cookie variables in the editor", "Math blocks/other features", "Adds data manipulating blocks and string operations", "Adds inline comments and a block to print to the console", "Loads extensions from URLs", "Gets the status code and message of any loaded extension", "Adds functionality from the Google Feed API", "A thin wrapper around the Gamepad API which supports Xbox 360 controllers, most PS3 controllers, and other non-brand D-Pad controllers", "Goes to projects", "Performs hashing algorithms", "Allows for high quality sound manipulation within Scratch", "Adds an infinity reporter", "Opens JS dialog boxes", "Gets values of a joystick", "Goes to websites", "Connects to littleBits", "Uses JavaScript localStorage API", "Various logic gates", "This extension has a few blocks for math", "Multiple operators and a useful block for getting the hypotenuse of a triangle", "Enables mesh features", "Gets data from minecraft servers", "Adds a lot more math stuff", "Additional operators for Scratch", "Gets bounce ranges for objects", "Connect to PicoBoard with additional features", "Connects to PicoBoard", "Adds a power block", "Adds random wait block", "Uses JavaScript Speech API for speech to text", "Adds blocks for working with strings", "Several string manipulating features", "Temporary variables and lists", "Uses JavaScript Speech API for text to speech", "A couple blocks for working with variables", "Reports temperature for city", "Receives page data and opens urls", "Simultaneously connect, monitor and control multiple Arduino, BeagleBone Black and Raspberry Pi boards", "Xi4s in french" ];
-
-var extensionLinkTitles = [ "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX", "ScratchX, Doc", "ScratchX, Doc" ];
-
-$(document).ready(function(){ 
-$( "#outputs" ).hide();
-for (i = 0; i < extensionTitles.length; i++) {
-
-var extensionLinksTemp = extensionLinks[i].split(",")
-var extensionLinkTitlesTemp = extensionLinkTitles[i].split(",")
+var extensionLinksTemp = extensions[i].links.split(",")
+var extensionLinkTitlesTemp = extensions[i].linktitles.split(",")
 var linkarea = "";
 
 for (ii = 0; ii < extensionLinksTemp.length; ii++) {
@@ -90,11 +80,10 @@ for (ii = 0; ii < extensionLinksTemp.length; ii++) {
 linkarea = linkarea + '<a href=' + extensionLinksTemp[ii] + ' target="_blank">' + extensionLinkTitlesTemp[ii] + '</a>'
 
 }
-$( "#directory" ).append( '<tr id="item ' + i +'"><td>' + extensionTitles[i] + '</td><td>' + extensionAuthors[i] + '</td><td>' + linkarea + '</td><td>' + extensionDescriptions[i] +'</td><tr>' );
+$( "#directory" ).append( '<tr id="item ' + i +'"><td>' + extensions[i].title + '</td><td>' + extensions[i].author + '</td><td>' + linkarea + '</td><td>' + extensions[i].descriptions +'</td><tr>' );
 
 }
 })
-
 </script>
 <script>
 //original script by dfsq, thanks a ton!
@@ -120,50 +109,44 @@ $('#search').keyup(function() {
 <script>
 //for my own use to make updating the list quicker
 function addtolist() {
-var title = prompt("Title:", "");
-var author = prompt("Author:", "");
-var linktitles = prompt("Link Titles:", "ScratchX");
-var links = prompt("Links:", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/#scratch");
-var description = prompt("Description:", "");
-extensionTitles.push(title);
-extensionTitles.sort(function (a, b) {
-    return a.toLowerCase().localeCompare(b.toLowerCase());
-});
-var n = extensionTitles.indexOf(title);
-extensionAuthors.splice(n, 0, author);
-extensionLinks.splice(n, 0, links);
-extensionDescriptions.splice(n, 0, description);
-extensionLinkTitles.splice(n, 0, linktitles);
-$( "#outputs" ).show();
-document.getElementById('output1').innerHTML = "var extensionTitles = " + JSON.stringify(extensionTitles, null, 4) + ";";
-document.getElementById('output2').innerHTML = "var extensionAuthors = " + JSON.stringify(extensionAuthors, null, 4) + ";";
-document.getElementById('output3').innerHTML = "var extensionLinks = " + JSON.stringify(extensionLinks, null, 4) + ";";
-document.getElementById('output4').innerHTML = "var extensionDescriptions = " + JSON.stringify(extensionDescriptions, null, 4) + ";";
-document.getElementById('output5').innerHTML = "var extensionLinkTitles = " + JSON.stringify(extensionLinkTitles, null, 4) + ";";
+title = prompt("Title:", "");
+author = prompt("Author:", "");
+linktitles = prompt("Link Titles:", "ScratchX");
+links = prompt("Links:", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/#scratch");
+description = prompt("Description:", "");
+extensions.push();
+last = extensions.length;
+extensions[last] = new Object();
+extensions[last].title = title;
+extensions.sort(sort_by('title', false, function(a){return a.toUpperCase()}));
+
+n = arrayObjectIndexOf(extensions, title, "title");
+extensions[n].author = author;
+extensions[n].links = links;
+extensions[n].descriptions = description;
+extensions[n].linktitles = linktitles;
+
+console.log("var extensions = " + JSON.stringify(extensions, null, 4) + ";");
 }
 
-function removefromlist() {
-var item = prompt("Item #", "");
-extensionTitles.splice(item, 1);
-extensionAuthors.splice(item, 1);
-extensionLinks.splice(item, 1);
-extensionDescriptions.splice(item, 1);
-extensionLinkTitles.splice(item, 1);
-$( "#outputs" ).show();
-document.getElementById('output1').innerHTML = "var extensionTitles = " + JSON.stringify(extensionTitles, null, 4) + ";";
-document.getElementById('output2').innerHTML = "var extensionAuthors = " + JSON.stringify(extensionAuthors, null, 4) + ";";
-document.getElementById('output3').innerHTML = "var extensionLinks = " + JSON.stringify(extensionLinks, null, 4) + ";";
-document.getElementById('output4').innerHTML = "var extensionDescriptions = " + JSON.stringify(extensionDescriptions, null, 4) + ";";
-document.getElementById('output5').innerHTML = "var extensionLinkTitles = " + JSON.stringify(extensionLinkTitles, null, 4) + ";";
+var sort_by = function(field, reverse, primer){
+
+   var key = primer ? 
+       function(x) {return primer(x[field])} : 
+       function(x) {return x[field]};
+
+   reverse = !reverse ? 1 : -1;
+
+   return function (a, b) {
+       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+     } 
 }
 
-function outputlists() {
-$( "#outputs" ).show();
-document.getElementById('output1').innerHTML = "var extensionTitles = " + JSON.stringify(extensionTitles, null, 4) + ";";
-document.getElementById('output2').innerHTML = "var extensionAuthors = " + JSON.stringify(extensionAuthors, null, 4) + ";";
-document.getElementById('output3').innerHTML = "var extensionLinks = " + JSON.stringify(extensionLinks, null, 4) + ";";
-document.getElementById('output4').innerHTML = "var extensionDescriptions = " + JSON.stringify(extensionDescriptions, null, 4) + ";";
-document.getElementById('output5').innerHTML = "var extensionLinkTitles = " + JSON.stringify(extensionLinkTitles, null, 4) + ";";
+function arrayObjectIndexOf(myArray, searchTerm, property) {
+    for(var i = 0, len = myArray.length; i < len; i++) {
+        if (myArray[i][property] === searchTerm) return i;
+    }
+    return -1;
 }
 </script>
 </head>
@@ -177,7 +160,6 @@ document.getElementById('output5').innerHTML = "var extensionLinkTitles = " + JS
 <input type="text" id="search" placeholder="Type to search">
 </div>
 <br>
-<div id="outputs"><div id="output1"></div><br><div id="output2"></div><br><div id="output3"></div><br><div id="output4"></div><br><div id="output5"></div><br></div>
 <table id="directory">
 <tr id="top">
 <th>Title</th>
