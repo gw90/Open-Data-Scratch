@@ -2,7 +2,7 @@ var extensions = [
     {
         "title": "Alarm extension",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/alarm_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/alarm_extension.js#scratch",
         "descriptions": "Adds alarm countdown system",
         "linktitles": "ScratchX"
     },
@@ -37,7 +37,7 @@ var extensions = [
     {
         "title": "Browser Stuff",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/browser_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/browser_extension.js#scratch",
         "descriptions": "Open JS dialog boxes and new tabs",
         "linktitles": "ScratchX"
     },
@@ -107,14 +107,14 @@ var extensions = [
     {
         "title": "Gamepad",
         "author": "bobbybee",
-        "links": "http://scratchx.org/?url=https://rawgit.com/bobbybee/scratch-gamepad/master/ext.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/bobbybee/scratch-gamepad/master/ext.js#scratch",
         "descriptions": "A thin wrapper around the Gamepad API which supports Xbox 360 controllers, most PS3 controllers, and other non-brand D-Pad controllers",
         "linktitles": "ScratchX"
     },
     {
         "title": "Go to Project",
         "author": "MegaApuTurkUltra",
-        "links": "http://scratchx.org/?url=https://rawgit.com/MegaApuTurkUltra/Scratch-Go-To-Project/master/go-to-project.ext.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/MegaApuTurkUltra/Scratch-Go-To-Project/master/go-to-project.ext.js#scratch",
         "descriptions": "Goes to projects",
         "linktitles": "ScratchX"
     },
@@ -128,7 +128,7 @@ var extensions = [
     {
         "title": "HQ Sound",
         "author": "MegaApuTurkUltra",
-        "links": "http://scratchx.org/?url=https://rawgit.com/MegaApuTurkUltra/Scratch-HQ-Sound/master/scratch-hqs.ext.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/MegaApuTurkUltra/Scratch-HQ-Sound/master/scratch-hqs.ext.js#scratch",
         "descriptions": "Allows for high quality sound manipulation within Scratch",
         "linktitles": "ScratchX"
     },
@@ -149,7 +149,7 @@ var extensions = [
     {
         "title": "Joystick",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/joystickExtension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/joystickExtension.js#scratch",
         "descriptions": "Gets values of a joystick",
         "linktitles": "ScratchX"
     },
@@ -170,7 +170,7 @@ var extensions = [
     {
         "title": "Local Storage",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/localstorage_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/localstorage_extension.js#scratch",
         "descriptions": "Uses JavaScript localStorage API",
         "linktitles": "ScratchX"
     },
@@ -198,7 +198,7 @@ var extensions = [
     {
         "title": "Mesh",
         "author": "bobbybee",
-        "links": "http://scratchx.org/?url=https://rawgit.com/bobbybee/mesh-2.0/master/ext.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/bobbybee/mesh-2.0/master/ext.js#scratch",
         "descriptions": "Enables mesh features",
         "linktitles": "ScratchX"
     },
@@ -240,28 +240,28 @@ var extensions = [
     {
         "title": "PicoBoard",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/picoExtension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/picoExtension.js#scratch",
         "descriptions": "Connects to PicoBoard",
         "linktitles": "ScratchX"
     },
     {
         "title": "Power Extension",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/power_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/power_extension.js#scratch",
         "descriptions": "Adds a power block",
         "linktitles": "ScratchX"
     },
     {
         "title": "Random wait Extension",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/random_wait_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/random_wait_extension.js#scratch",
         "descriptions": "Adds random wait block",
         "linktitles": "ScratchX"
     },
     {
         "title": "Speech to Text",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/speech_to_text_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/speech_to_text_extension.js#scratch",
         "descriptions": "Uses JavaScript Speech API for speech to text",
         "linktitles": "ScratchX"
     },
@@ -289,14 +289,14 @@ var extensions = [
     {
         "title": "Text to Speech",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/text_to_speech_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/text_to_speech_extension.js#scratch",
         "descriptions": "Uses JavaScript Speech API for text to speech",
         "linktitles": "ScratchX"
     },
 	{
         "title": "Text to Speech Simple",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/text_to_speech_simple_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/text_to_speech_simple_extension.js#scratch",
         "descriptions": "Simple text to speech extension",
         "linktitles": "ScratchX"
     },
@@ -310,7 +310,7 @@ var extensions = [
     {
         "title": "Weather Extension",
         "author": "Scratchteam",
-        "links": "http://scratchx.org/?url=https://rawgit.com/sayamindu/scratch-extensions/master/weather_extension.js#scratch",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/weather_extension.js#scratch",
         "descriptions": "Reports temperature for city",
         "linktitles": "ScratchX"
     },
