@@ -93,7 +93,7 @@ var extensions = [
     {
         "title": "Extension Status Getter",
         "author": "Znapi",
-        "links": "http://scratchx.org/?url=http://znapi.github.io/scratchx/extension-status-getter/main.min.js#scratch, https://github.com/Znapi/scratchx/wiki/Extension-Status-Getter",
+        "links": "http://scratchx.org/?url=http://zaerospi.github.io/scratchx/extension-status-getter/main.min.js#scratch, https://github.com/Znapi/scratchx/wiki/Extension-Status-Getter",
         "descriptions": "Gets the status code and message of any loaded extension",
         "linktitles": "ScratchX, Doc"
     },
