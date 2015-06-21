@@ -219,14 +219,14 @@ var extensions = [
     {
         "title": "More Math",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://a.pomf.se/yfqifs.js#scratch",
+        "links": "http://scratchx.org/?url=https://d.maxfile.ro/tnwhzgnnsr.js#scratch",
         "descriptions": "Adds a lot more math stuff",
         "linktitles": "ScratchX"
     },
     {
         "title": "More Operators",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://a.pomf.se/ruvypv.js#scratch",
+        "links": "http://scratchx.org/?url=https://d.maxfile.ro/gjvbofyenf.js#scratch",
         "descriptions": "Additional operators for Scratch",
         "linktitles": "ScratchX"
     },
