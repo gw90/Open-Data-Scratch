@@ -84,6 +84,13 @@ var extensions = [
         "linktitles": "ScratchX"
     },
     {
+        "title": "Extended Math",
+        "author": "pulljosh",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/PullJosh/extended-math/master/extendedMath.js#scratch, https://github.com/PullJosh/extended-math",
+        "descriptions": "An extension that extends the mathematical capabilities of Scratch.",
+        "linktitles": "ScratchX, Doc"
+    },
+    {
         "title": "Extension Loader",
         "author": "Thepuzzlegame",
         "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Extension_Loader.js#scratch",
@@ -293,7 +300,7 @@ var extensions = [
         "descriptions": "Uses JavaScript Speech API for text to speech",
         "linktitles": "ScratchX"
     },
-	{
+    {
         "title": "Text to Speech Simple",
         "author": "Scratchteam",
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/text_to_speech_simple_extension.js#scratch",
