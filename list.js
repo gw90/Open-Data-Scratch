@@ -3,7 +3,7 @@ var extensions = [
         "title": "Alarm extension",
         "author": "Scratchteam",
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/alarm_extension.js#scratch",
-        "descriptions": "Adds alarm countdown system",
+        "descriptions": "An alarm countdown system",
         "linktitles": "ScratchX"
     },
     {
@@ -52,7 +52,7 @@ var extensions = [
         "title": "Cookie",
         "author": "gregory9",
         "links": "http://scratchx.org/?url=http://gw90.github.io/Complete-Extensions/cookie-extension.js#scratch, http://gw90.github.io/scratch-extension/",
-        "descriptions": "This extension allows you to use cookies with Scratch",
+        "descriptions": "allows you to use cookies with Scratch",
         "linktitles": "ScratchX, Doc"
     },
     {
@@ -87,7 +87,7 @@ var extensions = [
         "title": "Extended Math",
         "author": "pulljosh",
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/PullJosh/extended-math/master/extendedMath.js#scratch, https://github.com/PullJosh/extended-math",
-        "descriptions": "An extension that extends the mathematical capabilities of Scratch.",
+        "descriptions": "extends the mathematical capabilities of Scratch.",
         "linktitles": "ScratchX, Doc"
     },
     {
@@ -192,7 +192,7 @@ var extensions = [
         "title": "Math",
         "author": "gregory9",
         "links": "http://scratchx.org/?url=http://gw90.github.io/Complete-Extensions/math-extension.js#scratch, http://gw90.github.io/scratch-extension/",
-        "descriptions": "This extension has a few blocks for math",
+        "descriptions": "a few blocks for math",
         "linktitles": "ScratchX, Doc"
     },
     {
@@ -311,7 +311,7 @@ var extensions = [
         "title": "VarExt",
         "author": "StarStudios23",
         "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/VarExt.js#scratch",
-        "descriptions": "A couple blocks for working with variables",
+        "descriptions": "blocks for working with variables",
         "linktitles": "ScratchX"
     },
     {
