@@ -14,6 +14,13 @@ var extensions = [
         "linktitles": "ScratchX"
     },
     {
+        "title": "Arduino Extension",
+        "author": "khanning",
+        "links": "http://scratchx.org/?url=http://khanning.github.io/scratch-arduino-extension/arduino_extension.js#scratch, http://khanning.github.io/scratch-arduino-extension/",
+        "descriptions": "Interact with the physical world using Arduino",
+        "linktitles": "ScratchX, Doc"
+    },
+    {
         "title": "Battery Status",
         "author": "technoboy10",
         "links": "http://scratchx.org/?url=http://technoboy10.tk/scratchx/battery.js#scratch",
@@ -147,6 +154,13 @@ var extensions = [
         "linktitles": "ScratchX"
     },
     {
+        "title": "ISS Tracker",
+        "author": "khanning",
+        "links": "http://scratchx.org/?url=https://khanning.github.io/scratch-isstracker-extension/iss_extension.js#scratch, http://khanning.github.io/scratch-isstracker-extension/",
+        "descriptions": "Lets you track the progress of the International Space Station in it's orbit",
+        "linktitles": "ScratchX, Doc"
+    },
+    {
         "title": "JavaScript Dialogs",
         "author": "savaka",
         "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Javascript_Dialogs.js#scratch",
@@ -159,6 +173,13 @@ var extensions = [
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/sayamindu/scratch-extensions/master/joystickExtension.js#scratch",
         "descriptions": "Gets values of a joystick",
         "linktitles": "ScratchX"
+    },
+    {
+        "title": "Leap Motion",
+        "author": "khanning",
+        "links": "http://scratchx.org/?url=http://khanning.github.io/scratch-leapmotion-extension/leapmotion_extension.js#scratch, http://khanning.github.io/scratch-leapmotion-extension/",
+        "descriptions": "Incorporates hand tracking into projects using the Leap Motion controller",
+        "linktitles": "ScratchX, Doc"
     },
     {
         "title": "Link Opener",
@@ -313,6 +334,13 @@ var extensions = [
         "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/VarExt.js#scratch",
         "descriptions": "Blocks for working with variables",
         "linktitles": "ScratchX"
+    },
+    {
+        "title": "Weather",
+        "author": "mxsscott",
+        "links": "http://scratchx.org/?url=http://mscott.cx/scratchext/exts/weather.js#scratch, https://github.com/mxsscott/scratchext",
+        "descriptions": "Provides various blocks to obtain the current weather in a location",
+        "linktitles": "ScratchX, Doc"
     },
     {
         "title": "Weather Extension",
