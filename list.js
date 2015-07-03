@@ -224,6 +224,13 @@ var extensions = [
         "linktitles": "ScratchX"
     },
     {
+        "title": "MCPI-Scratch",
+        "author": "jrot",
+        "links": "http://scratchx.org/?url=https://cdn.rawgit.com/jbaragry/mcpi-scratch/master/mcpi-scratch.js#scratch, http://jbaragry.github.io/mcpi-scratch/",
+        "descriptions": "Allows you to add blocks and shapes to Minecraft from Scratch",
+        "linktitles": "ScratchX, Doc"
+    },
+    {
         "title": "Mesh",
         "author": "bobbybee",
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/bobbybee/mesh-2.0/master/ext.js#scratch",
