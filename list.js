@@ -86,13 +86,13 @@ var extensions = [
     {
         "title": "Debugging",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Debugging.js#scratch",
+        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Debugging.js#scratch, https://scratch.mit.edu/projects/embed/69475670/?autostart=true",
         "descriptions": "Adds inline comments and a block to print to the console",
-        "linktitles": "ScratchX"
+        "linktitles": "ScratchX, Doc"
     },
     {
         "title": "Extended Math",
-        "author": "pulljosh",
+        "author": "PullJosh",
         "links": "http://scratchx.org/?url=https://cdn.rawgit.com/PullJosh/extended-math/master/extendedMath.js#scratch, https://github.com/PullJosh/extended-math",
         "descriptions": "Extends the mathematical capabilities of Scratch.",
         "linktitles": "ScratchX, Doc"
