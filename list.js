@@ -135,9 +135,9 @@ var extensions = [
     {
         "title": "Hash",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Hash.js#scratch",
+        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Hash.js#scratch, https://scratch.mit.edu/projects/embed/69475670/?autostart=true",
         "descriptions": "Performs hashing algorithms",
-        "linktitles": "ScratchX"
+        "linktitles": "ScratchX, Doc"
     },
     {
         "title": "HQ Sound",
