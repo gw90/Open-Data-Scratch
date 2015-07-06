@@ -86,24 +86,24 @@ $( "#directory" ).append( '<tr id="item ' + i +'"><td>' + extensions[i].title + 
 })
 </script>
 <script>
-//original script by dfsq, thanks a ton!
+//original script by Cracker0dks, thanks a ton!
 $( document ).ready(function() {
-var $rows = $('#directory tr');
-$('#search').keyup(function() {
-    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-        reg = RegExp(val, 'i'),
-        text;
-    
-    $rows.show().filter(function() {
-	if (document.getElementById('search').value.length>0) {
-	$("#top").hide();
-	} else {
-	$("#top").show();
-	}
-        text = $(this).text().replace(/\s+/g, ' ');
-        return !reg.test(text);
-    }).hide();
+$("#search").keyup(function(){
+_this = this;
+
+$.each($("#directory tbody").find("tr"), function() {
+if (document.getElementById('search').value.length>0) {
+$("#top").hide();
+} else {
+$("#top").show();
+}
+console.log($(this).text());
+if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+$(this).hide();
+else
+$(this).show();
 });
+}); 
 });
 </script>
 <script>
