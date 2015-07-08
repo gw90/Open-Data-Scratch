@@ -163,9 +163,9 @@ var extensions = [
     {
         "title": "JavaScript Dialogs",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Javascript_Dialogs.js#scratch",
+        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/Javascript_Dialogs.js#scratch, https://scratch.mit.edu/projects/embed/69475670/?autostart=true",
         "descriptions": "Opens JS dialog boxes",
-        "linktitles": "ScratchX"
+        "linktitles": "ScratchX, Doc"
     },
     {
         "title": "Joystick",
@@ -205,7 +205,7 @@ var extensions = [
     {
         "title": "Logic",
         "author": "savaka",
-        "links": "http://scratchx.org/?url=http://a.pomf.se/fdzopv.js#scratch",
+        "links": "http://scratchx.org/?url=https://d.maxfile.ro/nehklzorlm.js#scratch",
         "descriptions": "Various logic gates",
         "linktitles": "ScratchX"
     },

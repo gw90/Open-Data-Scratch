@@ -1,172 +1,175 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Scratch Extensions Directory</title>
-<script src="jquery-1.11.3.min.js"></script>
-<script src="list.js"></script>
-<style>
-table {
-margin-left:auto; 
-margin-right:auto;
-color: #333;
-font-family: Helvetica, Arial, sans-serif;
-width: 1000px;
-border-collapse:
-collapse; border-spacing: 0;
-}
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Scratch Extensions Directory</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="sorttable.js"></script>
+    <script src="list.js"></script>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+            width: 1000px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
 
-td, th {
-padding: 0px 5px;
-border: 1px solid transparent; /* No more visible border */
-height: 30px;
-transition: all 0.3s;  /* Simple transition for hover effect */
-}
+        table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+            content: " \25B4\25BE" 
+        }
+        
+        td,
+        th {
+            padding: 0px 5px;
+            border: 1px solid transparent;
+            /* No more visible border */
+            height: 30px;
+            transition: all 0.3s;
+            /* Simple transition for hover effect */
+        }
+        
+        th {
+            background: #DFDFDF;
+            /* Darken header a bit */
+            font-weight: bold;
+        }
+        
+        td {
+            background: #F1F1F1;
+            text-align: left;
+        }
+        
+        #title {
+            text-align: center;
+            font-size: 225%;
+        }
+        
+        #text {
+            text-align: center;
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #search {
+            box-sizing: content-box;
+            height: 20px;
+            width: 200px;
+            perspective-origin: 108px 15px;
+            transform-origin: 108px 15px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 3px 3px 3px 3px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        a {
+            color: #333;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            for (i = 0; i < extensions.length; i++) {
 
-th {
-background: #DFDFDF;  /* Darken header a bit */
-font-weight: bold;
-}
+                var extensionLinksTemp = extensions[i].links.split(",")
+                var extensionLinkTitlesTemp = extensions[i].linktitles.split(",")
+                var linkarea = "";
 
-td {
-background: #FAFAFA;
-text-align: left;
-}
+                for (ii = 0; ii < extensionLinksTemp.length; ii++) {
 
-/* Cells in even rows (2,4,6...) are one color */
-tr:nth-child(even) td { background: #F1F1F1; }  
+                    linkarea = linkarea + '<a href=' + extensionLinksTemp[ii] + ' target="_blank">' + extensionLinkTitlesTemp[ii] + '</a>'
 
-/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-tr:nth-child(odd) td { background: #FEFEFE; } 
-/* Hover cell effect!
-tr td:hover { background: #666; color: #FFF; }  */
+                }
+                $("#directory").append('<tr id="item ' + i + '"><td>' + extensions[i].title + '</td><td>' + extensions[i].author + '</td><td>' + linkarea + '</td><td>' + extensions[i].descriptions + '</td><tr>');
 
-#title {
-text-align: center;
-font-size: 225%;
-}
+            }
 
-.inputHolder{
-text-align: center;
-color: #333;
-font-family: Helvetica, Arial, sans-serif;
-}
+            $("#search").keyup(function() {
+                _this = this;
 
-#search {
-box-sizing: content-box;
-height: 20px;
-width: 200px;
-perspective-origin: 108px 15px;
-transform-origin: 108px 15px;
-border: 1px solid rgb(204, 204, 204);
-border-radius: 3px 3px 3px 3px;
-font-family: Helvetica, Arial, sans-serif;
-}
+                $.each($("#directory tbody").find("tr"), function() {
+                    if (document.getElementById('search').value.length > 0) {
+                        $("#top").hide();
+                    } else {
+                        $("#top").show();
+                    }
+                    console.log($(this).text());
+                    if ($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+                        $(this).hide();
+                    else
+                        $(this).show();
+                });
+            });
+        });
 
-a {
-color: #333;
-}
-</style>
-<script>
-$(document).ready(function(){
-for (i = 0; i < extensions.length; i++) {
+        //for my own use to make updating the list quicker
+        function addtolist() {
+            title = prompt("Title:", "");
+            author = prompt("Author:", "");
+            linktitles = prompt("Link Titles:", "ScratchX");
+            links = prompt("Links:", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/#scratch");
+            description = prompt("Description:", "");
+            extensions.push();
+            last = extensions.length;
+            extensions[last] = new Object();
+            extensions[last].title = title;
+            extensions.sort(sort_by('title', false, function(a) {
+                return a.toUpperCase()
+            }));
 
-var extensionLinksTemp = extensions[i].links.split(",")
-var extensionLinkTitlesTemp = extensions[i].linktitles.split(",")
-var linkarea = "";
+            n = arrayObjectIndexOf(extensions, title, "title");
+            extensions[n].author = author;
+            extensions[n].links = links;
+            extensions[n].descriptions = description;
+            extensions[n].linktitles = linktitles;
 
-for (ii = 0; ii < extensionLinksTemp.length; ii++) {
+            console.log("var extensions = " + JSON.stringify(extensions, null, 4) + ";");
+        }
 
-linkarea = linkarea + '<a href=' + extensionLinksTemp[ii] + ' target="_blank">' + extensionLinkTitlesTemp[ii] + '</a>'
+        var sort_by = function(field, reverse, primer) {
 
-}
-$( "#directory" ).append( '<tr id="item ' + i +'"><td>' + extensions[i].title + '</td><td>' + extensions[i].author + '</td><td>' + linkarea + '</td><td>' + extensions[i].descriptions +'</td><tr>' );
+            var key = primer ?
+                function(x) {
+                    return primer(x[field])
+                } :
+                function(x) {
+                    return x[field]
+                };
 
-}
-})
-</script>
-<script>
-//original script by Cracker0dks, thanks a ton!
-$( document ).ready(function() {
-$("#search").keyup(function(){
-_this = this;
+            reverse = !reverse ? 1 : -1;
 
-$.each($("#directory tbody").find("tr"), function() {
-if (document.getElementById('search').value.length>0) {
-$("#top").hide();
-} else {
-$("#top").show();
-}
-console.log($(this).text());
-if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
-$(this).hide();
-else
-$(this).show();
-});
-}); 
-});
-</script>
-<script>
-//for my own use to make updating the list quicker
-function addtolist() {
-title = prompt("Title:", "");
-author = prompt("Author:", "");
-linktitles = prompt("Link Titles:", "ScratchX");
-links = prompt("Links:", "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/#scratch");
-description = prompt("Description:", "");
-extensions.push();
-last = extensions.length;
-extensions[last] = new Object();
-extensions[last].title = title;
-extensions.sort(sort_by('title', false, function(a){return a.toUpperCase()}));
+            return function(a, b) {
+                return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+            }
+        }
 
-n = arrayObjectIndexOf(extensions, title, "title");
-extensions[n].author = author;
-extensions[n].links = links;
-extensions[n].descriptions = description;
-extensions[n].linktitles = linktitles;
-
-console.log("var extensions = " + JSON.stringify(extensions, null, 4) + ";");
-}
-
-var sort_by = function(field, reverse, primer){
-
-   var key = primer ? 
-       function(x) {return primer(x[field])} : 
-       function(x) {return x[field]};
-
-   reverse = !reverse ? 1 : -1;
-
-   return function (a, b) {
-       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-     } 
-}
-
-function arrayObjectIndexOf(myArray, searchTerm, property) {
-    for(var i = 0, len = myArray.length; i < len; i++) {
-        if (myArray[i][property] === searchTerm) return i;
-    }
-    return -1;
-}
-</script>
+        function arrayObjectIndexOf(myArray, searchTerm, property) {
+            for (var i = 0, len = myArray.length; i < len; i++) {
+                if (myArray[i][property] === searchTerm) return i;
+            }
+            return -1;
+        }
+	</script>
 </head>
-<body>
-<p id="title">Scratch Extensions Directory</p>
 
-<div class="inputHolder">
-<p>Not sure what this is all about? Check <a href="http://scratchx.org/#faq">this</a> page out. Submit your own extensions <a href="https://scratch.mit.edu/discuss/topic/115258/">here.</a>
-</p>
-<p>Disclaimer: Extensions listed on this site are not endorsed by me or otherwise guaranteed safe.</p>
-<input type="text" id="search" placeholder="Type to search">
-</div>
-<br>
-<table id="directory">
-<tr id="top">
-<th>Title</th>
-<th>Author</th>
-<th>Links</th>
-<th>Description</th>
-</tr>
-</table>
+<body>
+    <p id="title">Scratch Extensions Directory</p>
+    <div id="text">
+        <p>Not sure what this is all about? Check <a href="http://scratchx.org/#faq">this</a> page out. Submit your own extensions <a href="https://scratch.mit.edu/discuss/topic/115258/">here.</a></p>
+        <p>Disclaimer: Extensions listed on this site are not endorsed by me or otherwise guaranteed safe.</p>
+        <input type="text" id="search" placeholder="Type to search">
+    </div>
+    <br>
+    <table class="sortable" id="directory">
+        <thead id="top">
+            <th>Title</th>
+            <th>Author</th>
+            <th class="sorttable_nosort">Links</th>
+            <th>Description</th>
+        </thead>
+    </table>
 </body>
+
 </html>
