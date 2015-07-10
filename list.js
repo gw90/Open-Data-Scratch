@@ -10,7 +10,7 @@ var extensions = [
     {
         "title": "FeedMe RSS fun",
         "author": "powerpoint56",
-        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/FeedMe_RSS_fun.js#scratch",
+        "links": "http://scratchx.org/?url=http://gw90.github.io/Open-Data-Scratch/extensions/FeedMe_RSS_fun.js#scratch",
         "descriptions": "Adds functionality from the Google Feed API",
         "linktitles": "ScratchX"
     },
@@ -45,7 +45,7 @@ var extensions = [
     {
         "title": "WebExt",
         "author": "StarStudios23",
-        "links": "http://scratchx.org/?url=http://thepuzzlegame.github.io/extensions/WebExt.js#scratch",
+        "links": "http://scratchx.org/?url=http://gw90.github.io/Open-Data-Scratch/extensions/WebExt.js#scratch",
         "descriptions": "Receives page data and opens urls",
         "linktitles": "ScratchX"
     }
