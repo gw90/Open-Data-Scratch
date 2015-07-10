@@ -42,11 +42,4 @@ var extensions = [
         "descriptions": "Reports temperature for city",
         "linktitles": "ScratchX"
     },
-    {
-        "title": "WebExt",
-        "author": "StarStudios23",
-        "links": "http://scratchx.org/?url=http://gw90.github.io/Open-Data-Scratch/extensions/WebExt.js#scratch",
-        "descriptions": "Receives page data and opens urls",
-        "linktitles": "ScratchX"
-    }
 ];
